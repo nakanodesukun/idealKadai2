@@ -41,7 +41,6 @@ class ViewController: UIViewController {
 //        static let nonZero: String = "数値には0以外を代入してください"
 //    }
 //
-   
 //        //        オプショナルだからflatMapを使う。.mapだとアンラップできない
 //      guard  let firstNum = firstTextField.text.flatMap({Double($0)}),
 //             let secondNum = secondTextField.text.flatMap({Double($0)}) else { return resultLabel.text = ErrorMessage.nonZero }
@@ -53,13 +52,7 @@ class ViewController: UIViewController {
 //            resultLabel.text = String(result)
 //        case .failure(let messege):
 //            resultLabel.text = messege
-//        }
-    
-    
-    
-    
-    
-    
+//
     private enum Forking {
         case succes(Int)
         case filure(String)
@@ -94,9 +87,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var secondTextField: UITextField!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var resultLabel: UILabel!
-    
 
-    
     @IBAction private func resultButon(_ sender: Any) {
          //数値以外はオプショナルなのでnilを返す。なのでguard文でnillチェックしてあげる
        guard let text1 = firstTextField.text.flatMap({Int($0)}),
